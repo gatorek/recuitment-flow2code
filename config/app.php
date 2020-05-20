@@ -125,7 +125,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Autoloaded Service Providers
+    | Autoloaded Service Interfaces\Providers
     |--------------------------------------------------------------------------
     |
     | The service providers listed here will be automatically loaded on the
@@ -137,7 +137,7 @@ return [
     'providers' => [
 
         /*
-         * Laravel Framework Service Providers...
+         * Laravel Framework Service Interfaces\Providers...
          */
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
@@ -163,17 +163,17 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
-         * Package Service Providers...
+         * Package Service Interfaces\Providers...
          */
 
         /*
-         * Application Service Providers...
+         * Application Service Interfaces\Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        App\Application\Providers\AppServiceProvider::class,
+        App\Application\Providers\AuthServiceProvider::class,
+        // App\Application\Providers\BroadcastServiceProvider::class,
+        App\Application\Providers\EventServiceProvider::class,
+        App\Application\Providers\RouteServiceProvider::class,
 
     ],
 
