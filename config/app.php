@@ -169,6 +169,7 @@ return [
         /*
          * Application Service Interfaces\Providers...
          */
+        App\Application\Providers\DomainServiceProvider::class,
         App\Application\Providers\AppServiceProvider::class,
         App\Application\Providers\AuthServiceProvider::class,
         // App\Application\Providers\BroadcastServiceProvider::class,

@@ -15,22 +15,21 @@ class CreateMoviesTable extends Migration
     {
         Schema::create('genres', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('name');
+            $table->timestamps();
         });
 
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('title');
             $table->string('poster')->nullable();
             $table->longText('description');
             $table->string('country');
+            $table->timestamps();
         });
 
         Schema::create('genre_movie', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->integer('genre_id');
             $table->integer('movie_id');
             $table->foreign('genre_id')
