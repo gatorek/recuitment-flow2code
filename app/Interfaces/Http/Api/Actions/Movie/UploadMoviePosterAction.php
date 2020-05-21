@@ -22,7 +22,7 @@ class UploadMoviePosterAction extends BaseAction
 
     public function __invoke(int $id, Request $request)
     {
-        $request->validate(['file' => 'required']);
+        $request->validate(['file' => 'required|image']);
         $movie = $this->command->execute($id, $request->file('file'));
 
         return response()->json($movie);
