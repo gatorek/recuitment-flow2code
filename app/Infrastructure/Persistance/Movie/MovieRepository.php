@@ -65,4 +65,9 @@ class MovieRepository implements MovieContract
             $movie->delete();
         }
     }
+
+    public function findByTitle(string $title): Collection
+    {
+        return Movie::with(['genres'])->where('title', 'like', '%' . $title . '%')->get();
+    }
 }

@@ -21,6 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('movies', \App\Interfaces\Http\Api\Actions\Movie\ListMovieAction::class);
 Route::post('movies', \App\Interfaces\Http\Api\Actions\Movie\CreateMovieAction::class);
-Route::put('movies/{id}', \App\Interfaces\Http\Api\Actions\Movie\UpdateMovieAction::class)->where('id', '[0-9]+');;
-Route::delete('movies/{id}', \App\Interfaces\Http\Api\Actions\Movie\DeleteMovieAction::class)->where('id', '[0-9]+');;
-Route::post('movies/{id}/poster', \App\Interfaces\Http\Api\Actions\Movie\UploadMoviePosterAction::class)->where('id', '[0-9]+');;
+Route::put('movies/{id}', \App\Interfaces\Http\Api\Actions\Movie\UpdateMovieAction::class)->where('id', '[0-9]+');
+Route::delete('movies/{id}', \App\Interfaces\Http\Api\Actions\Movie\DeleteMovieAction::class)->where('id', '[0-9]+');
+Route::post('movies/{id}/poster', \App\Interfaces\Http\Api\Actions\Movie\UploadMoviePosterAction::class)->where('id', '[0-9]+');
+Route::get('movies/{title}', \App\Interfaces\Http\Api\Actions\Movie\FindMoviesByTitleAction::class);

@@ -18,4 +18,6 @@ interface MovieContract
     public function updatePoster(int $id, string $poster): Movie;
 
     public function delete(int $id): void;
+
+    public function findByTitle(string $title): Collection;
 }
