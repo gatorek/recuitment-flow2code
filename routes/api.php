@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('movies', \App\Interfaces\Http\Api\Actions\Movie\ListMovieAction::class);
+Route::post('movies', \App\Interfaces\Http\Api\Actions\Movie\CreateMovieAction::class);
+Route::put('movies/{id}', \App\Interfaces\Http\Api\Actions\Movie\UpdateMovieAction::class)->where('id', '[0-9]+');;
+Route::delete('movies/{id}', \App\Interfaces\Http\Api\Actions\Movie\DeleteMovieAction::class)->where('id', '[0-9]+');;
